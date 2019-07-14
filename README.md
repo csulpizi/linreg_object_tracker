@@ -5,10 +5,9 @@ A motion tracker that uses linear regression to predict the trajectory  of items
 Uses linear regression to predict the trajectory of items on screen to determine which items belong to which objects.
 
 Required Inputs:
+**IMPORTANT**: Make sure that the x and y values are scaled such that they are between 0 and 1. 
 * x -> Shape (n, ). The x coordinates of each of n objects. 
 * y -> Shape (n, ). The y coordinates of each of n objects. 
-**IMPORTANT**: Make sure that the x and y values are scaled such that
-        they are between 0 and 1. 
 * t -> Shape (n, ). The time stamps of each of n objects. 
 
 Optional Inputs: 
