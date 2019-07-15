@@ -54,10 +54,13 @@ Further, this motion tracker does not take into account the visual appearance of
 ### Example:
 This example uses items that were found by using background detection on a video of cars moving down a street. Each of the points represents a car that was detected.
 
+The following function was called, ie all of the default values were used for this example:
+```obj_list = track_objects(x,y,t)```
+
 The plot below shows 4 frames taken from the aforementioned data set. 
 <img src="images/example_1.jpg">
 
-The blue object demonstrates how items are assigned to existing objects. The blue “x” points are all of the items belonging to the blue object*, the blue line is the calculated trajectory of that object, the end of the line represents the predicted location of that object in this time frame, and the grey circle shows the bound_tight distance from the predicted location. The black “x” points represent items in this time frame that have not yet been classified. You can see that in each frame there is an item within the grey circle, and so each of those items is added to the blue object. 
+The blue object demonstrates how items are assigned to existing objects. The blue “x” points are all of the items belonging to the blue object*, the blue line is the calculated trajectory of that object, the end of the line represents the predicted location of that object in this time frame, and the grey circle shows the bound_tight distance from the predicted location. The black “x” points represent items in this time frame that have not yet been classified. You can see that in each frame there is an item within the grey circle, and so each of those items is added to the blue object. <br>
 *Note: The blue items are all from previous time frames. They are shown simply to show the motion of the object over time.
 
 The green object demonstrates how new objects are created. At t=551 you can see an item that is not assigned to any object (the black “x” at the bottom of the plot). At t=552, you can see the item from the previous frame (shown in grey) next to a new item (shown in black). These two points are considered a potential new object. The algorithm decides that there are enough items in the future trajectory of this potential object, and so the green object is created. You can see in t=553 and t=554 that new items are within the bound_tight distance and are therefore added to the green object.
