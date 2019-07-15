@@ -4,7 +4,7 @@ A motion tracker that uses linear regression to predict the trajectory  of items
 ### track_objects() Function
 Uses linear regression to predict the trajectory of items on screen to determine which items belong to which objects.
 
-Required Inputs:
+Required Inputs:<br>
 **IMPORTANT**: Make sure that the x and y values are scaled such that they are between 0 and 1. 
 * x -> Shape (n, ). The x coordinates of each of n objects. 
 * y -> Shape (n, ). The y coordinates of each of n objects. 
